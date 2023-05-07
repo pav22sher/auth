@@ -1,0 +1,18 @@
+spring:
+  main:
+    allow-circular-references: true
+  datasource:
+    url: jdbc:h2:file:/tmp/mydb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: create
+  liquibase:
+    enabled: true
+    change-log: classpath:liquibase/changelog-master.yml
