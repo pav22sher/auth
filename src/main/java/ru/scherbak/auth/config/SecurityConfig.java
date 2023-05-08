@@ -5,8 +5,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -57,21 +55,21 @@ public class SecurityConfig {
         return jdbcUserDetailsManager;
     }*/
 
-    private UserDetails getUser() {
+    /*private UserDetails getUser() {
         return User.withDefaultPasswordEncoder()
                 .username("user")
                 .password("password")
                 .roles("USER")
                 .build();
-    }
+    }*/
 
-    private UserDetails getAdmin() {
+    /*private UserDetails getAdmin() {
         return User.withDefaultPasswordEncoder()
                 .username("admin")
                 .password("password")
                 .roles("USER", "ADMIN")
                 .build();
-    }
+    }*/
 
     @Autowired
     private UserService userService;
